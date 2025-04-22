@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendas Online - Seu Site de Compras</title>
+  <style>
+    body {
+      background-color: #e6f7ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    header {
+      background-color: #005580;
+      color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .destaque {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #008CBA;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px 0;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005f73;
+    }
+
+    .media-container {
+      margin: 30px auto;
+      max-width: 100%;
+    }
+
+    video {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .imagem-destaque {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #005580;
+      color: white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo a VendasOnline.com</h1>
+    <p>Seu destino para compras online de qualidade</p>
+  </header>
+
+  <div class="container">
+    <div class="destaque">
+      <h2>Ofertas Especiais</h2>
+      <p>Confira nossas promoções exclusivas!</p>
+      <button onclick="mostrarMensagem()">Clique para Ver Ofertas</button>
+    </div>
+
+    <div class="media-container">
+      <h3>Conheça Nossa Loja</h3>
+      <video controls>
+        <source src="/storage/emulated/0/Download/1733301161499.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+
+    <div class="media-container">
+      <h3>Produto em Destaque</h3>
+      <img src="/storage/emulated/0/Download/images (3).jpeg" alt="Produto em destaque" class="imagem-destaque">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 VendasOnline.com - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function mostrarMensagem() {
+      alert("Ofertas carregadas! Em breve você verá nossas melhores promoções.");
+      
+      // Aqui você pode adicionar mais funcionalidades
+      // como carregar produtos dinamicamente
+    }
+  </script>
+</body>
+</html>
