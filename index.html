@@ -1,125 +1,182 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vendas Online - Seu Site de Compras</title>
+  <meta name="description" content="Compre celulares e eletrônicos com o melhor preço e entrega garantida.">
+  <meta name="keywords" content="celulares, smartphones, iPhone, loja online, VendasOnline">
+  <title>VendasOnline.com - Sua Loja Digital</title>
   <style>
-    body {
-      background-color: #e6f7ff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-    }
+    :root {
+      --primary-color: #005580;
+      --secondary-color: #008CBA;
+      --background-color: #e6f7ff;
+      --text-color: #333;
+      --white: #ffffff;
+    }body {
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-    header {
-      background-color: #005580;
-      color: white;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-    }
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+}
 
-    h1 {
-      color: white;
-      margin: 0;
-    }
+nav {
+  text-align: center;
+  padding: 1rem;
+  background: var(--secondary-color);
+}
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .destaque {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-    button {
-      background-color: #008CBA;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 20px 0;
-      transition: background-color 0.3s;
-    }
+.promo-banner {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
 
-    button:hover {
-      background-color: #005f73;
-    }
+.product-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
 
-    .media-container {
-      margin: 30px auto;
-      max-width: 100%;
-    }
+.product-card {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
 
-    video {
-      max-width: 100%;
-      border-radius: 8px;
-    }
+.product-card:hover {
+  transform: translateY(-5px);
+}
 
-    .imagem-destaque {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #005580;
-      color: white;
-      border-radius: 8px;
-    }
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.product-description {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f73;
+}
+
+.video-container {
+  margin: 3rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.video-container h2 {
+  color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Bem-vindo a VendasOnline.com</h1>
-    <p>Seu destino para compras online de qualidade</p>
-  </header>
-
-  <div class="container">
-    <div class="destaque">
-      <h2>Ofertas Especiais</h2>
-      <p>Confira nossas promoções exclusivas!</p>
-      <button onclick="mostrarMensagem()">Clique para Ver Ofertas</button>
-    </div>
-
-    <div class="media-container">
-      <h3>Conheça Nossa Loja</h3>
-      <video controls>
-        <source src="/storage/emulated/0/Download/1733301161499.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-    </div>
-
-    <div class="media-container">
-      <h3>Produto em Destaque</h3>
-      <img src="/storage/emulated/0/Download/images (3).jpeg" alt="Produto em destaque" class="imagem-destaque">
+    <h1>VendasOnline.com</h1>
+    <p>Sua experiência de compra digital premium</p>
+  </header>  <nav>
+    <a href="index.html">Início</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="contato.html">Contato</a>
+  </nav>  <div class="container">
+    <div class="promo-banner">
+      <h2>Promoção Especial - Frete Grátis em Todas as Compras!</h2>
+    </div><div class="product-showcase">
+  <div class="product-card">
+    <img src="images/iphones.jpg" alt="iPhones diversos" class="product-image">
+    <div class="product-info">
+      <h3 class="product-title">iPhones Variados</h3>
+      <p class="product-description">Escolha o modelo ideal para você: iPhone 13, 14, 15, Pro e Pro Max.</p>
+      <div class="product-price">A partir de R$ 5.999,00</div>
+      <a href="#comprar" class="btn">Comprar Agora</a>
     </div>
   </div>
+</div>
 
-  <footer>
-    <p>&copy; 2023 VendasOnline.com - Todos os direitos reservados</p>
+<div class="video-container">
+  <h2>Conheça Nossos Produtos</h2>
+  <video controls width="100%">
+    <source src="videos/demonstracao.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+</div>
+
+  </div>  <footer>
+    <p>&copy; 2025 VendasOnline.com - Todos os direitos reservados</p>
+    
   </footer>
-
-  <script>
-    function mostrarMensagem() {
-      alert("Ofertas carregadas! Em breve você verá nossas melhores promoções.");
-      
-      // Aqui você pode adicionar mais funcionalidades
-      // como carregar produtos dinamicamente
-    }
-  </script>
 </body>
 </html>
